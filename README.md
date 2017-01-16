@@ -19,22 +19,25 @@ Main charts functionality provided by the `chart` component and its `options` pr
 
 ```TypeScript
 import { Component } from '@angular/core';
-
+import {Gantt} from 'angular2-ganttchart'
 @Component({
-    selector: 'simple-chart-example',
+    selector: 'simple-gantt chart-example',
     template: `
-        <chart [options]="options"></chart>
+        <gantt-chart [gantt]="gantt"></gantt-chart>
     `
 })
 export class App {
     constructor() {
-        this.options = {
-            title : { text : 'simple chart' },
-            series: [{
-                data: [29.9, 71.5, 106.4, 129.2],
-            }]
-        };
+        // StartDate
+        // EndDate
+        // ActualStartDate
+        // ActualEndDate
+        // ForcastedDate
+        //Progress
+        //Status
+        //Gantt direction 
+        this.gantt = new Gantt("01/01/2016", "11/30/2016", "01/20/2016", "11/15/2016", "", 100, 3,false);
     }
-    options: Object;
+    gantt: Gantt;
 }
 ```
