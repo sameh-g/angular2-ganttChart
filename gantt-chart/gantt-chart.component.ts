@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Gantt } from "./ganttModel"
 
 @Component({
-  selector: 'app-gantt-chart',
+  selector: 'gantt-chart',
   templateUrl: './gantt-chart.component.html',
   styleUrls: ['./gantt-chart.component.css'],
 })
